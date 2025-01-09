@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+}
+
+main {
+	background: $light;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+	transition: color .45s;
+
+	&:hover {
+		color: $link;
+	}
+}
+
+.primary-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+	background: $primary-color;
+	color: $white;
+	padding: 15px 30px;
+	border: 1px solid $primary-color;
+	border-radius: 5px;
+	transition: all .45s;
+
+    &:hover {
+		background: $white;
+		color: $primary-color;
+		cursor: pointer;
+
+		svg {
+			g {
+				path {
+					stroke: $primary-color;
+				}
+			}
+		}
+    }
+    
+    &.corner-rounded {
+		border-top-right-radius: 12px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 0;
+    }
+
+    &.light {
+		background: $white;
+		color: $primary-color;
+		border: 1px solid $white;
+        svg {
+            g {
+                path {
+					stroke: $primary-color;
+                }
+            }
+        }
+
+		&:hover {
+			background: $primary-color;
+			color: $white;
+
+			svg {
+				g {
+					path {
+						stroke: $white;
+					}
+				}
+			}
+		}
+    }
+}
+
+form {
+	.control-row {
+		display: flex;
+		flex-flow: wrap;
+		column-gap: 24px;
+		row-gap: 17px;
+
+		.control {
+			display: flex;
+			flex-direction: column;
+			flex: 47%;
+			border-radius: 5px;
+			label {
+				font-size: .87rem;
+				font-weight: 700;
+				margin-bottom: 14px;
+			}
+			&:not(.textarea) {
+				label {
+					display: none;
+				}
+			}
+			input,textarea {
+				font-family: "Ubuntu", sans-serif;
+				width: 100%;
+				padding: 16px 14px;
+				background: $grey;
+				border-radius: 5px;
+				border: 1px solid $grey;
+			}
+			&.select-wrapper {
+				position: relative;
+				&:after {
+					content: "";
+					background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8.407" height="4.703" viewBox="0 0 8.407 4.703"><g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(8.053 0.354) rotate(90)"><path id="Path_38025" data-name="Path 38025" d="M0,0,3.85,3.85,0,7.7" fill="none" stroke="%23000" stroke-linejoin="round" stroke-width="1"/></g></svg>') no-repeat 50%;
+					position: absolute;
+					bottom: 0;
+					top: 20px;
+					right: 19px;
+					width: 9px;
+					height: 6px;
+					pointer-events: none;
+				}
+				select {
+					-webkit-appearance: none;
+					appearance: none;
+					background: none;
+					border: 1px solid $primary-color;
+					border-radius: 5px;
+					color: #040707;
+					padding: 14.5px 35px 14.5px 13px;
+					width: 100%;
+				}
+			}
+			&.w-100 {
+				flex: 100%;
+			}
+		}
+	}
+
+	.acceptance-row {
+		justify-content: space-between;
+		margin-top: 45px;
+		margin-bottom: 32px;
+		.grey-comment {
+			font-size: .87rem;
+			color: $darkgrey;
+		}
+		.acceptance {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			font-size: .75rem;
+			input {
+				width: 17px;
+				height: 17px;
+			}
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+	.form-actions {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.error {
+		font-size: .75rem;
+		color: $error;
+		margin-top: 6px;
+	}
+}

@@ -1,0 +1,10 @@
+.banner {
+    .page-banner {
+        width: 100%;
+
+        @include respond-to(lg) {
+            aspect-ratio: 1440 / 800;
+            object-fit: cover;
+        }
+    }
+}

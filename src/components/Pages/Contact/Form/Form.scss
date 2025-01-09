@@ -1,0 +1,16 @@
+.contact-form-view {
+    padding-bottom: 195px;
+
+    @include respond-to(lg) {
+        padding-bottom: 50px;
+    }
+    .content-container {
+        position: relative;
+        z-index: 1;
+        margin-top: -6%;
+
+        @include respond-to(lg) {
+            margin-top: 50px;
+        }
+    }
+}

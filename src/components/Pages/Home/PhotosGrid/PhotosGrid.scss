@@ -1,0 +1,14 @@
+.photos-grid {
+    background: $white;
+    padding-bottom: 30px;
+    .row {
+        gap: 0;
+        .col {
+            padding: 0;
+            img {
+                aspect-ratio: 720 / 720;
+                width: 100%;
+            }
+        }
+    }
+}

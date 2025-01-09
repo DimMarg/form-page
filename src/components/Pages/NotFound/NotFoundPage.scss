@@ -1,0 +1,18 @@
+.error-page {
+    padding: 100px 0;
+    
+    .content-container {
+        @include flex-center();
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+
+        .container-title {
+            font-size: 7rem;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+        }
+    }
+}

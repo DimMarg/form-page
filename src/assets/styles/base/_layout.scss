@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+    max-width: 1232px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.row {
+    @include flex-center();
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+}
